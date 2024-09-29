@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Maro Better Search",
+    "version": "1.0.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "iconMaro.png"
+        }
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["https://www.maro.cz/c/*/*", "https://www.maro.cz/*"],
+            "js": ["sortProducts.js"]
+        }
+    ]
+}
